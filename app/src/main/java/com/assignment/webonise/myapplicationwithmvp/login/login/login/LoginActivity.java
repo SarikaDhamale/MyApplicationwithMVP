@@ -1,13 +1,14 @@
 package com.assignment.webonise.myapplicationwithmvp.login.login.login;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.assignment.webonise.myapplicationwithmvp.R;
+import com.assignment.webonise.myapplicationwithmvp.login.login.main.HomeActivity;
 
 public class LoginActivity extends Activity implements LoginView , OnClickListener{
 
@@ -57,7 +58,8 @@ public class LoginActivity extends Activity implements LoginView , OnClickListen
     @Override
     public void navigateToHome() {
 
-        Toast.makeText(activity, "Success", Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(activity, HomeActivity.class);
+        startActivity(intent);
 
     }
 
